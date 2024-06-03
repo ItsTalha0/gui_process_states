@@ -63,6 +63,15 @@ static int __init procfs1_init(void)
 		return 0;
 }
 
+//int gen_seed()
+//{
+//	int i;
+//	get_random_bytes(&i,1);
+//	i = i%1000;
+//	return i;
+//}
+
+
 static void __exit procfs1_exit(void)
 {
 		proc_remove(our_proc_file);

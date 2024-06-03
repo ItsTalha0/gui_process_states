@@ -1,0 +1,9 @@
+BEGIN{
+	print srand() 
+    //x=(rand()*100000)%128
+	//if( x!=0 )
+	//{
+	//	printf("%d",x);
+//	}
+	}
+
