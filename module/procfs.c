@@ -20,14 +20,14 @@ module_param(myint,int,0);
 /* function registered for reading the procfs */
 static ssize_t procfile_read(struct file *file_pointer,char __user * buffer,size_t buffer_length,loff_t * offset)
 {
-		int status = -1;
+		long status = -1;
 		char s[1000]  ;
 		int len = sizeof(s);
 		ssize_t ret = len;
 		status=my_task_struct->__state;
 		s[0]='\0';
-		sprintf(s,"%d",status);
-		pr_info("current state is %d \n",status);
+		sprintf(s,"%ld",status);
+		pr_info("current state is %ld \n",status);
 		if( *offset >= len || copy_to_user(buffer,s,len))
 		{
 				pr_info("copy to user failed\n");
