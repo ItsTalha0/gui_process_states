@@ -21,7 +21,7 @@ fi
 echo "emptying sample";
 echo -n "" > "sample";
 echo "removing previos module if initiated";
-sudo rmmod procfs;
+#sudo rmmod procfs;
 #if test $1;then
 if test $# != 2;then
 	echo "Please provide 2 argument first run flag and second pid";
@@ -41,7 +41,9 @@ else
 					if test "$1" = "$run";then
 						echo "starting program in normal mode";
 						echo "sudo insmod module/procfs.ko myint=$2" | bash;
-						ve/bin/python3 ve/project/test.py
+						sleep 5;
+						echo "starting frontedn";
+						ve/bin/python3 ve/project/test.py;
 					fi
 				fi
 
