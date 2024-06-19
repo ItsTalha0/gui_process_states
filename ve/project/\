@@ -10,7 +10,7 @@ coord = dict(
 	parked	= ((300,150),(270,140)),
 	uniter	= ((430,200),(400,190)),
 	stoped	= ((120,400),(90,390)),
-	sleep	= ((460,410),(430,400)),
+	sleep	= ((450,430),(420,420)),
 	frozen	= ((290,550),(270,540)),
 	zombie	= ((120,560),(100,550)),
 	err		= ((60,60),(40,50))
@@ -23,8 +23,7 @@ state_map = {
 	0x00000004 : "stoped",
 	0x00000080 : "dead",
 	0x00000040 : "parked",
-	0x00008000 : "frozen",
-	0x00000020 : "zombie"
+	0x00008000 : "frozen"
 	}
 #path=os.environ["path"]
 mode = int(input("please enter 1 for debug and 2 for run\n"))
@@ -58,19 +57,7 @@ def show_output(file):
 		#draw_rectangle_lines(100,200,50,50,BLACK)#running
 		draw_text(strr,10,10,20,BLACK)
 		#for running
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["dead"][0][0],coord["dead"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["sleep"][0][0],coord["sleep"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["stoped"][0][0],coord["stoped"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["zombie"][0][0],coord["zombie"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["uniter"][0][0],coord["uniter"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["parked"][0][0],coord["parked"][0][1],BLACK)
-		draw_line(coord["running"][0][0],coord["running"][0][1],coord["frozen"][0][0],coord["frozen"][0][1],BLACK)
-		
-		draw_line(coord["dead"][0][0],coord["dead"][0][1],coord["sleep"][0][0],coord["sleep"][0][1],BLACK)
-		
-
-		for i in cord.state_map:
-			draw_circle(cord.coord[cord.state_map[i]][0][0],cord.coord[cord.state_map[i]][0][1],50,WHITE)
+		draw_line(coord[
 		if state != -1:
 			if state != 0:
 				for i in cord.state_map:

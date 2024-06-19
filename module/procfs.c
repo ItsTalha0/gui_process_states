@@ -24,7 +24,7 @@ static ssize_t procfile_read(struct file *file_pointer,char __user * buffer,size
 		char s[1000]  ;
 		int len = sizeof(s);
 		ssize_t ret = len;
-		status=my_task_struct->__state;
+		status=my_task_struct->__state | my_task_struct->exit_state;
 		s[0]='\0';
 		sprintf(s,"%ld",status);
 		pr_info("current state is %ld \n",status);
