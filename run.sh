@@ -41,7 +41,7 @@ else
 					if test "$1" = "$run";then
 						echo "starting program in normal mode";
 						echo "sudo insmod module/procfs.ko myint=$2" | bash;
-						sleep 5;
+						sleep 1;
 						echo "starting frontedn";
 						ve/bin/python3 ve/project/test.py;
 					fi
