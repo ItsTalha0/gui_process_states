@@ -25,7 +25,7 @@ echo "removing previos module if initiated";
 #if test $1;then
 if test $# != 2;then
 	echo "Please provide 2 argument first run flag and second pid";
-	exit;
+	#exit;
 else
 	if [[ "$1" =~ -[a-z]* && $2 > 0 ]] ;then
 		if test  "$1" = "$verbose"  ;then
@@ -51,7 +51,13 @@ else
 		fi
 	fi
 fi
-sudo rmmod procfs
+
+cnt=$(lsmod | grep procfs | wc -l)
+echo $cnt;
+if [[ $cnt > 0 ]];then
+	sudo rmmod procfs;
+	echo "removed module exiting";
+fi
 #fi
 
 #running the python part for ui.
