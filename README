@@ -1,1 +1,16 @@
 A simple process state monitering tool for debian and debian derived osses
+
+for running the kernel module based single process version
+	first install kernel headers appropriate for you version of os.
+	second install build-essentials 
+	third run make command in the module directory
+	once module compiles wihtout any error 
+
+	then run 
+	$ ./run.sh -r <pid of process you want to moniter>
+
+for running the multi process table based system
+	just run the 
+	$ ./run2.sh <list of pids> 
+	#example $./run2.sh 123 234 43234 
+
