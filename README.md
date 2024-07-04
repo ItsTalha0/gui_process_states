@@ -10,10 +10,11 @@ for running the kernel module based single process version
 	$ ./run.sh -r <pid of process you want to moniter>
 
 for running the multi process table based system
-	just run the 
-	$ ./run2.sh <list of pids> 
-	#example $./run2.sh 123 234 43234 
+
+	run the 
+	$ ./run2.sh <list of pids> #example $./run2.sh 123 234 43234 
 
 images
-![stopped](stooped.png)
+![stopped](stopped.png)
 ![dead](dead.png)
+![multi_process](multiple_image.png)
